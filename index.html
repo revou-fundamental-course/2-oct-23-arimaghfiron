@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KALKULATOR SUHU</title>
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Suhu</h1>
+    </header>
+    <section>
+        <label for="input-field" id="input-label">Celcius</label>
+        <input id="input-field" type="number" placeholder="0">
+        <div>
+            <button id="btn-konversi" onclick="convert()">Konversi</button>
+            <button id="btn-reset" onclick="reset()">Reset</button>
+            <button id="btn-reverse" onclick="reverse()">Reverse</button>
+        </div>
+        <label for="result-field" id="result-label">Farenheit</label>
+        <textarea id="result-field" name="result" cols="30" rows="2"></textarea>
+        <label for="formula-field">Cara Kalkulasi</label>
+        <textarea id="formula-field" name="formula" cols="30" rows="2"></textarea>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
