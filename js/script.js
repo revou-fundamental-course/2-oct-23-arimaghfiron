@@ -11,11 +11,11 @@ let isReverse = false
 const convert = () => {
     if(!isReverse){
         resultField.value = (inputField.value * 9 / 5) + 32
-        formulaField.value = `${inputField.value}C * (9/5) + 32 = ${resultField.value}F`
+        formulaField.value = `${inputField.value}℃ * (9/5) + 32 = ${resultField.value}℉`
     }
     else{
         resultField.value = (inputField.value - 32) * 5 / 9
-        formulaField.value = `(${inputField.value}F - 32) * 5/9 = ${resultField.value}C`
+        formulaField.value = `(${inputField.value}℉ - 32) * 5/9 = ${resultField.value}℃`
     }
 }
 
@@ -25,7 +25,9 @@ const reverse = () => {
     inputLabel.innerText = resultLabel.innerText 
     resultLabel.innerText = temp
     inputField.value = resultField.value
-    convert()
+    if(resultField.value){
+        convert()
+    }
 }
 
 const reset = () => {
