@@ -4,7 +4,10 @@
 KALKULATOR SUHU
 This project is useful for converting Celsius temperature to Fahrenheit and vice versa.
 
-For Demo, click link below 👇
-https://github.com/revou-fundamental-course/2-oct-23-arimaghfiron
+Github Repository :
+https://github.com/revou-fundamental-course/2-oct-23-arimaghfiron/
+
+For Demo Github Pages :
+https://revou-fundamental-course.github.io/2-oct-23-arimaghfiron/
 
 Thanks 
