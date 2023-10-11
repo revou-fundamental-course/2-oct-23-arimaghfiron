@@ -7,16 +7,15 @@ const btnReverse = document.getElementById("btn-rereverse")
 const inputLabel = document.getElementById("input-label")
 const resultLabel = document.getElementById("result-label")
 let isReverse = false
-const intRegex = /^[-.,e\d]+$/
+const intRegex = /^[+-.,eE\d]+$/
 
 const convert = () => {
-  try{
-    if(intRegex.test(inputField.value)){
-      if(!isReverse){
+  try {
+    if (intRegex.test(inputField.value)) {
+      if (!isReverse) {
         resultField.value = (inputField.value * 9 / 5) + 32
         formulaField.value = `${inputField.value}℃ * (9/5) + 32 = ${resultField.value}℉`
-      }
-      else{
+      } else {
         resultField.value = (inputField.value - 32) * 5 / 9
         formulaField.value = `(${inputField.value}℉ - 32) * 5/9 = ${resultField.value}℃`
       }
@@ -24,7 +23,7 @@ const convert = () => {
       throw new SyntaxError("Hanya menerima input tipe angka (desimal & negatif) !")
     }
   }
-  catch(error){
+  catch(error) {
     alert("Konversi Gagal : " + error.message)
   }
 }
@@ -32,12 +31,12 @@ const convert = () => {
 const reverse = () => {
   try {
     isReverse = !isReverse
-    let temp = inputLabel.innerText 
-    inputLabel.innerText = resultLabel.innerText 
+    let temp = inputLabel.innerText
+    inputLabel.innerText = resultLabel.innerText
     resultLabel.innerText = temp
     inputField.value = resultField.value
-    if(resultField.value){
-        convert()
+    if (resultField.value) {
+      convert()
     }
   }
   catch(error) {
