@@ -90,7 +90,7 @@ const changeTemperatureType = (position) => {
         resultSpan.innerText = resultTemperature.selectedOptions[0].text
         break;
       default:
-        console.log("Position not match")
+        throw new SyntaxError("Posisi tidak tepat")
       }
     }
     catch(error) {
